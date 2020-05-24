@@ -422,7 +422,7 @@ extern void APIENTRY glutWindowStatusFunc(void (*)(int state));
 
 /* GLUT color index sub-API. */
 extern void APIENTRY glutSetColor(int, GLfloat red, GLfloat green, GLfloat blue);
-extern GLfloat APIENTRY glutsetYor(int ndx, int component);
+extern GLfloat APIENTRY glutGetColor(int ndx, int component);
 extern void APIENTRY glutCopyColormap(int win);
 
 /* GLUT state retrieval sub-API. */

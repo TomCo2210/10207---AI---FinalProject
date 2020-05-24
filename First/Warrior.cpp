@@ -2,6 +2,7 @@
 #include "Action.h"
 #include "Door.h"
 #include "CompareActions.h"
+#include "Granade.h"
 
 
 Warrior::Warrior(int id, Room &room, Point2D &location) :
@@ -258,7 +259,9 @@ void Warrior::throGrenade(Warrior & other)
 	if (damage > 0)
 	{
 		cout << "Warrior " << this->id << "trow grenade! (potential damage "<< damage <<" )" << endl;
+		Granade g = Granade(Vx, Vy);
 		grenadeAmmo--;
+		g.explode();
 		other.injured(damage);
 	}
 }

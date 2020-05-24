@@ -1,7 +1,8 @@
 #pragma once
+#include "Node.h"
 #include "Point2D.h"
 
-class MazePart
+class MazePart : Node
 {
 public:
 	static const int SPACE = 1;

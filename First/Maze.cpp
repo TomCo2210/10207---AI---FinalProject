@@ -5,6 +5,9 @@
 #include "Parent.h"
 
 Maze* Maze::maze = nullptr;
+Room rooms[Maze::NUM_ROOMS];
+double map[Maze::MSIZE][Maze::MSIZE] = { 0 };
+int numExistingRooms = 0;
 
 Maze::Maze()
 {
@@ -244,7 +247,7 @@ stack<Point2D> Maze::localAStar(Point2D &currentLocation, Point2D targetLocation
 	{
 		if (pq.empty())
 		{
-			cout << "pq should not be empty in this function!\n fnuctin:lookForEnemyInRoom ";
+			cout << "pq should not be empty in this function!\n function: lookForEnemyInRoom ";
 			return walkingPath;
 		}
 
